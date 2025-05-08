@@ -150,6 +150,7 @@
                     </a>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -162,19 +163,33 @@
     <!-- Swiper & GLightbox Init -->
     <script>
         const swiper = new Swiper('.swiper', {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 1,
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: false,
+            grabCursor: true,
+            freeMode: {
+                enabled: true,
+                sticky: true, // smooth deceleration
+                momentumBounce: false,
+            },
+            mousewheel: {
+                forceToAxis: true,
+                sensitivity: 0.5,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
         });
+
+
 
         const lightbox = GLightbox({
             selector: '.glightbox'
         });
     </script>
+
 
     <footer class="footer dark-background">
         <div class="container">
