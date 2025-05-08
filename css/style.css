@@ -481,14 +481,16 @@ nav ul li a.active {
 }
 
 .swiper-slide {
-    width: auto; /* Swiper will handle size */
+    width: auto;
+    /* Swiper will handle size */
     flex-shrink: 0;
     text-align: center;
 }
 
 .swiper-slide img {
     width: 100%;
-    max-width: 200px; /*to reduce the size of the screen  */
+    max-width: 200px;
+    /*to reduce the size of the screen  */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -499,6 +501,90 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
+/* ======================
+   PRICING SECTION
+   ====================== */
+.pricing-section {
+    padding: 60px 20px;
+    background: var(--light-color);
+    text-align: center;
+}
+
+.pricing-section .section-title {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.pricing-section .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 30px 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.pricing-card .price span {
+    font-size: 16px;
+    color: #777;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.pricing-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #444;
+}
+
+.pricing-card .btn {
+    padding: 10px 25px;
+    font-size: 14px;
+}
+
+/* Highlight the most popular plan */
+.pricing-card.popular {
+    border: 2px solid var(--primary-color);
+    background-color: var(--accent-color);
+}
 
 /* ======================
    FOOTER (Shared)
