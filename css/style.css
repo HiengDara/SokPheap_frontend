@@ -63,12 +63,24 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 2px 2px;
 }
 
-.logo h1 {
-    color: var(--primary-color);
-    font-size: 24px;
+.logo img {
+    padding: 0px;
+    margin: 0px;
+    /* Optional additional styles: */
+    display: block; /* Ensures proper spacing */
+    max-width: 30%; /* Makes logo responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 4px; /* Softens edges if desired */
+    transition: all 0.3s ease; /* Smooth hover effects */
+}
+
+.logo img:hover {
+    /* Example hover effect */
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 nav ul {
