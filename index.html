@@ -44,12 +44,12 @@
                     risks, encouraging early intervention.
                 </p>
                 <div class="download-buttons">
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" onclick="showMaintenanceMessage(event)">
                         <img src="./images/google-play.png" alt="Google Play"
                             style="height: 20px; margin-right: 8px;  vertical-align: sub;">
                         Google Play
                     </a>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn" onclick="showMaintenanceMessage(event)">
                         <img src="./images/app-store.png" alt="App Store"
                             style="height: 20px; margin-right: 8px; vertical-align: sub;"> App
                         Store
@@ -72,21 +72,32 @@
         <div class="container">
             <div class="link-card">
                 <h3>About SokPheap</h3>
+                <img src="images/about.png" alt="About SokPheap" class="link-card-image">
                 <p>Learn about our mission to improve Cambodian healthcare.</p>
                 <a href="about.html" class="btn">Read More</a>
             </div>
             <div class="link-card">
                 <h3>Key Features</h3>
+                <img src="images/idea.png" alt="key Feature" class="link-card-image">
                 <p>Discover our AI-powered health tools.</p>
                 <a href="features.html" class="btn">View Features</a>
             </div>
             <div class="link-card">
                 <h3>Pricing Plans</h3>
+                <img src="images/tag.png" alt="pricing plans" class="link-card-image">
                 <p>Affordable options for everyone.</p>
                 <a href="pricing.html" class="btn">See Plans</a>
             </div>
         </div>
     </section>
+
+    <script>
+        function showMaintenanceMessage(event) {
+            event.preventDefault(); // prevent actual link behavior
+            alert("Oops! Still under maintenance, will be out soon.");
+        }
+    </script>
+
 
     <footer class="footer dark-background">
         <div class="container">

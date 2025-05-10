@@ -267,6 +267,12 @@ nav ul li a.active {
     margin-bottom: 20px;
 }
 
+.link-card-image {
+    width: 25%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
 
 /* ======================
    PAGE HEADER (Shared)
@@ -444,7 +450,14 @@ nav ul li a.active {
     /* Optional: centers the image */
 }
 
-
+.feature-box {
+    background-image: url('images/lifesync-bg.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
 .feature-content {
     flex: 1;
     padding: 10px;
@@ -817,7 +830,9 @@ footer {
 /* Resources Section */
 .page-header {
     background-color: var(--secondary-color);
+    padding: 100px, 0, 20px;
 }
+
 .resources {
     padding: 4rem 0;
     background-color: var(--secondary-color);
