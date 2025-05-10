@@ -451,13 +451,13 @@ nav ul li a.active {
 }
 
 .feature-box {
-    background-image: url('images/lifesync-bg.jpg'); /* Replace with your actual image path */
     background-size: cover;
     background-position: center;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
+
 .feature-content {
     flex: 1;
     padding: 10px;
@@ -631,8 +631,9 @@ nav ul li a.active {
 
 /* Highlight the most popular plan */
 .pricing-card.popular {
-    border: 2px solid var(--dark-color);
     background-color: var(--light-color);
+    transform: scale(1.13);
+    /* Increase size for emphasis */
 }
 
 /* ======================
@@ -831,6 +832,7 @@ footer {
 .page-header {
     background-color: var(--secondary-color);
     padding: 100px, 0, 20px;
+    padding: 120px 0 0px;
 }
 
 .resources {
@@ -886,7 +888,7 @@ footer {
 }
 
 .featured-main h3 {
-    font-size: 1.3rem;
+    font-size: 1.19rem;
     margin-bottom: 0.5rem;
 }
 
@@ -925,7 +927,7 @@ footer {
 
 .side-post h4 {
     font-size: 1rem;
-    font-weight: 180;
+    font-weight: 600;
     color: #222;
 }
 
