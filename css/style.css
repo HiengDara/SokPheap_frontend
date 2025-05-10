@@ -817,6 +817,7 @@ footer {
 /* Resources Section */
 .page-header {
     background-color: var(--secondary-color);
+    padding: 120px 0 0px;
 }
 .resources {
     padding: 4rem 0;
@@ -871,7 +872,7 @@ footer {
 }
 
 .featured-main h3 {
-    font-size: 1.3rem;
+    font-size: 1.19rem;
     margin-bottom: 0.5rem;
 }
 
