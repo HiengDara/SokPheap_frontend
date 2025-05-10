@@ -815,9 +815,12 @@ footer {
    ====================== */
 
 /* Resources Section */
+.page-header {
+    background-color: var(--secondary-color);
+}
 .resources {
     padding: 4rem 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
 }
 
 .resources .section-title {
