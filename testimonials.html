@@ -31,13 +31,13 @@
 
     <!-- Header Section -->
     <section class="page-header">
-    <div class="container">
-        <h2>Real Stories, Real Impact 💫</h2>
-        <p>
-        Hear from Cambodians who transformed their health with SokPheap.
-        These testimonials showcase the power of AI-driven preventive care.
-        </p>
-    </div>
+        <div class="container">
+            <h2>Real Stories, Real Impact 💫</h2>
+            <p>
+                Hear from Cambodians who transformed their health with SokPheap.
+                These testimonials showcase the power of AI-driven preventive care.
+            </p>
+        </div>
     </section>
 
     <!-- Testimonial -->
@@ -46,7 +46,9 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=12" alt="Avinash Kr" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
+                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
+                    Photoshop.”
                 </p>
                 <h3 class="user-name">Avinash Kr <span>Co-Founder at xyz</span></h3>
             </div>
@@ -54,7 +56,9 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
+                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
+                    Photoshop.”
                 </p>
                 <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
             </div>
@@ -62,7 +66,9 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
+                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
+                    Photoshop.”
                 </p>
                 <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
             </div>
@@ -70,7 +76,9 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
+                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
+                    Photoshop.”
                 </p>
                 <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
             </div>
@@ -78,12 +86,14 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
+                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
+                    Photoshop.”
                 </p>
                 <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
             </div>
         </div>
-        
+
         <!-- Bullet Navigation -->
         <div class="testimonial-bullets">
             <button class="active" onclick="showTestimonial(0)"></button>
@@ -95,17 +105,36 @@
     <!-- JavaScript for Slider -->
     <script>
         const slider = document.querySelector('.testimonial-slider');
-        const bullets = document.querySelectorAll('.testimonial-bullets button');
+        const testimonials = document.querySelectorAll('.testimonial-box');
+        const bulletsContainer = document.querySelector('.testimonial-bullets');
+
         let currentIndex = 0;
+        const cardWidth = 370; // 350px + 20px margin-right from your CSS
+
+        const totalSlides = testimonials.length;
+        const maxIndex = totalSlides - 1;
 
         function showTestimonial(index) {
+            if (index < 0 || index > maxIndex) return;
             currentIndex = index;
-            slider.style.transform = `translateX(-${index * 350}px)`;
-            bullets.forEach((bullet, i) => {
-                bullet.classList.toggle('active', i === index);
+            slider.style.transform = `translateX(-${index * cardWidth}px)`;
+
+            document.querySelectorAll('.testimonial-bullets button').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
             });
         }
+
+        // Create bullets dynamically
+        bulletsContainer.innerHTML = '';
+        for (let i = 0; i <= maxIndex; i++) {
+            const bullet = document.createElement('button');
+            bullet.addEventListener('click', () => showTestimonial(i));
+            if (i === 0) bullet.classList.add('active');
+            bulletsContainer.appendChild(bullet);
+        }
     </script>
+
+
 
 
     <footer class="footer dark-background">
