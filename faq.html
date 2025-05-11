@@ -223,6 +223,28 @@
             });
         });
     </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav ul");
+            const headerContainer = document.querySelector("header .container");
+            nav.classList.toggle("show");
+            headerContainer.classList.toggle("open"); /* Optional: For changing hamburger to close icon */
+        }
+
+        // Get the header container to attach the click listener for the hamburger menu
+        const headerContainer = document.querySelector('header .container');
+
+        if (headerContainer) {
+            headerContainer.addEventListener('click', function(event) {
+                // Check if the click is on the pseudo-element (hamburger)
+                if (window.getComputedStyle(headerContainer, '::after').getPropertyValue('content') !== 'none') {
+                    toggleMenu();
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>
