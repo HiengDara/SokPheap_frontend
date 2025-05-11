@@ -112,43 +112,42 @@
     </div>
 
     <script>
-        const slider = document.querySelector('.testimonial-slider');
-        const testimonials = document.querySelectorAll('.testimonial-box');
-        const bulletsContainer = document.querySelector('.testimonial-bullets');
-        const numTestimonials = testimonials.length;
-        let currentIndex = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.querySelector('.testimonial-slider');
+            const testimonials = document.querySelectorAll('.testimonial-box');
+            const bulletsContainer = document.querySelector('.testimonial-bullets');
 
-        function updateBullets() {
-            bulletsContainer.innerHTML = ''; // Clear existing bullets
-            for (let i = 0; i < numTestimonials; i++) {
-                const button = document.createElement('button');
-                button.addEventListener('click', () => showTestimonial(i));
-                if (i === currentIndex) {
-                    button.classList.add('active');
+            const testimonialsPerPage = 3;
+            const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
+            let currentPage = 0;
+
+            function updateBullets() {
+                bulletsContainer.innerHTML = ''; // Clear existing bullets
+                for (let i = 0; i < totalPages; i++) {
+                    const button = document.createElement('button');
+                    if (i === currentPage) button.classList.add('active');
+                    button.addEventListener('click', () => showPage(i));
+                    bulletsContainer.appendChild(button);
                 }
-                bulletsContainer.appendChild(button);
             }
-        }
 
-        function showTestimonial(index) {
-            if (index >= 0 && index < numTestimonials) {
-                currentIndex = index;
-                slider.scrollTo({
-                    left: testimonials[index].offsetLeft,
-                    behavior: 'smooth'
-                });
-                updateBullets();
+            function showPage(pageIndex) {
+                if (pageIndex >= 0 && pageIndex < totalPages) {
+                    currentPage = pageIndex;
+                    const scrollToIndex = pageIndex * testimonialsPerPage;
+                    if (testimonials[scrollToIndex]) {
+                        slider.scrollTo({
+                            left: testimonials[scrollToIndex].offsetLeft - slider.offsetLeft,
+                            behavior: 'smooth'
+                        });
+                        updateBullets();
+                    }
+                }
             }
-        }
 
-        // Initialize bullets
-        updateBullets();
-
-        // Basic auto-slide functionality (optional)
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % numTestimonials;
-        //     showTestimonial(currentIndex);
-        // }, 5000); // Change slide every 5 seconds
+            // Initialize bullets and show first page
+            updateBullets();
+        });
     </script>
 
 
