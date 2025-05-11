@@ -29,67 +29,84 @@
         </div>
     </header>
 
+    <!-- Header Section -->
     <section class="page-header">
-        <div class="container">
-            <h2>Real Stories, Real Impact 💫</h2>
-            <p>
-                Hear from Cambodians who transformed their health with SokPheap.
-                These testimonials showcase the power of AI-driven preventive care.
-            </p>
-        </div>
+    <div class="container">
+        <h2>Real Stories, Real Impact 💫</h2>
+        <p>
+        Hear from Cambodians who transformed their health with SokPheap.
+        These testimonials showcase the power of AI-driven preventive care.
+        </p>
+    </div>
     </section>
 
-    <section class="testimonials-section">
-        <div class="container">
-            <!-- Testimonial 1 (Multimedia: Audio) -->
-            <div class="testimonial-card">
-                <img src="images/user1.jpg" alt="Sopha, 45" class="testimonial-img">
-                <div class="testimonial-content">
-                    <h3>Sopha, 45</h3>
-                    <p>"SokPheap warned me about pre-diabetes before I had symptoms!"</p>
-                    <!-- AUDIO (REQUIREMENT FULFILLED) -->
-                    <audio controls class="testimonial-audio">
-                        <source src="media/sopha-testimonial.mp3" type="audio/mpeg">
-                        Your browser doesn’t support audio.
-                    </audio>
-                </div>
+    <!-- Testimonial -->
+    <div class="testimonial-container">
+        <div class="testimonial-slider">
+            <div class="testimonial-box">
+                <img src="https://i.pravatar.cc/100?img=12" alt="Avinash Kr" class="user-img">
+                <p class="testimonial-text">
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                </p>
+                <h3 class="user-name">Avinash Kr <span>Co-Founder at xyz</span></h3>
             </div>
 
-            <!-- Testimonial 2 (Multimedia: Video) -->
-            <div class="testimonial-card">
-                <div class="video-container">
-                    <!-- VIDEO (REQUIREMENT FULFILLED) -->
-                    <video controls poster="images/video-thumbnail.jpg">
-                        <source src="media/raksmey-interview.mp4" type="video/mp4">
-                        Your browser doesn’t support video.
-                    </video>
-                </div>
-                <div class="testimonial-content">
-                    <h3>Raksmey, 32</h3>
-                    <p>"The AI fitness coach helped me lose 8kg in 3 months."</p>
-                </div>
+            <div class="testimonial-box">
+                <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
+                <p class="testimonial-text">
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                </p>
+                <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
             </div>
 
-            <!-- Testimonial Stats Table -->
-            <table class="testimonial-stats">
-                <tr>
-                    <th>User</th>
-                    <th>Improvement</th>
-                    <th>Timeframe</th>
-                </tr>
-                <tr>
-                    <td>Vannak, 50</td>
-                    <td>Blood pressure normalized</td>
-                    <td>4 months</td>
-                </tr>
-                <tr>
-                    <td>Sreynith, 28</td>
-                    <td>Reduced cholesterol by 20%</td>
-                    <td>6 months</td>
-                </tr>
-            </table>
+            <div class="testimonial-box">
+                <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
+                <p class="testimonial-text">
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                </p>
+                <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
+                <p class="testimonial-text">
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                </p>
+                <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
+                <p class="testimonial-text">
+                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing, and Photoshop.”
+                </p>
+                <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
+            </div>
         </div>
-    </section>
+        
+        <!-- Bullet Navigation -->
+        <div class="testimonial-bullets">
+            <button class="active" onclick="showTestimonial(0)"></button>
+            <button onclick="showTestimonial(1)"></button>
+            <button onclick="showTestimonial(2)"></button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Slider -->
+    <script>
+        const slider = document.querySelector('.testimonial-slider');
+        const bullets = document.querySelectorAll('.testimonial-bullets button');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            currentIndex = index;
+            slider.style.transform = `translateX(-${index * 350}px)`;
+            bullets.forEach((bullet, i) => {
+                bullet.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+
 
     <footer class="footer dark-background">
         <div class="container">
