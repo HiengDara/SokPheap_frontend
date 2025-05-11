@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - SokPheap AI Health Monitoring</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/Sokpheap Logo.png" alt="SokPheap Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Resources</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+                Have questions about SokPheap? We've got answers! Explore our FAQ section to learn more about how our
+                app
+                works, its features, pricing, and how it can help you take control of your health.
+            </p>
+        </div>
+
+        <div class="container">
+            <!-- Required Table -->
+            <h3 class="table-title">SokPheap vs Traditional Healthcare</h3>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>SokPheap AI</th>
+                    <th>Traditional Checkup</th>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>From $9.99/month</td>
+                    <td>$50+ per visit</td>
+                </tr>
+                <tr>
+                    <td>Early Detection</td>
+                    <td>✅ AI risk alerts</td>
+                    <td>❌ Manual analysis only</td>
+                </tr>
+                <tr>
+                    <td>Accessibility</td>
+                    <td>24/7 via smartphone</td>
+                    <td>Clinic hours only</td>
+                </tr>
+            </table>
+
+            <!-- FAQ Accordion -->
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        What is SokPheap?
+                        <span class="faq-toggle">›</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>AI health app for Cambodians to prevent NCDs like diabetes and hypertension.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does it work?
+                        <span class="faq-toggle">›</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Analyzes wearable/manual data to provide personalized health insights.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is my data secure?
+                        <span class="faq-toggle">›</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We use end-to-end encryption and comply with local data laws.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer dark-background">
+        <div class="container">
+            <h2 class="sitename">SokPheap</h2>
+            <p>
+                Empowering Cambodians to take control of their health through innovative AI-driven solutions.
+                Join us on the journey to a healthier future!
+            </p>
+
+            <div class="social-links">
+                <a href="https://x.com/DaraHieng" target="_blank">
+                    <img src="./images/twitter.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com/daraempire999/" target="_blank">
+                    <img src="./images/facebook.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/dara_hieng/" target="_blank">
+                    <img src="./images/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/dara-hieng-1b30a3292/" target="_blank">
+                    <img src="./images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+
+
+            <div class="copyright">
+                &copy; 2025 <strong class="sitename">SokPheap</strong>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item if clicking on inactive one
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

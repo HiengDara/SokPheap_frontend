@@ -18,7 +18,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/Sokpheap Logo.png">
+                <img src="images/Sokpheap Logo.png" alt="SokPheap Logo">
             </div>
             <nav>
                 <ul>
@@ -27,6 +27,8 @@
                     <li><a href="features.html" class="active">Features</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="blog.html">Resources</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -35,8 +37,14 @@
 
     <section class="page-header">
         <div class="container">
-            <h2>Three Main Features</h2>
-            <p>All of these three main features are connected to empower your health journey.</p>
+            <h2>Three Main Features 🧠 </h2>
+            <p>
+                All of these three main features are intelligently connected to empower your health journey like never
+                before.
+                From early symptom detection to personalized health guidance and lifestyle support, SokPheap is designed
+                to help you
+                make smarter decisions, stay proactive, and take control of your well-being—every step of the way.
+            </p>
         </div>
     </section>
 
@@ -197,6 +205,25 @@
         const lightbox = GLightbox({
             selector: '.glightbox'
         });
+    </script>
+    <script>
+        // Scroll trigger function
+        function revealOnScroll() {
+            const featureRows = document.querySelectorAll('.feature-row');
+            const triggerBottom = window.innerHeight * 0.85;
+
+            featureRows.forEach(row => {
+                const rowTop = row.getBoundingClientRect().top;
+
+                if (rowTop < triggerBottom) {
+                    row.classList.add('visible');
+                }
+            });
+        }
+
+        // Run on scroll and on page load
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
     </script>
 
 

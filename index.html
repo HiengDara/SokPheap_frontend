@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/Sokpheap Logo.png">
+                <img src="images/Sokpheap Logo.png" alt="SokPheap Logo">
             </div>
             <nav>
                 <ul>
@@ -21,6 +21,8 @@
                     <li><a href="features.html">Features</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="blog.html">Resources</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -97,6 +99,14 @@
             alert("Oops! Still under maintenance, will be out soon.");
         }
     </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector("nav ul");
+            nav.classList.toggle("show");
+        }
+    </script>
+
 
 
     <footer class="footer dark-background">
