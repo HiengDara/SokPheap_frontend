@@ -772,115 +772,103 @@ nav ul li a.active {
 }
 
 
-
 /* ======================
    TESTIMONIAL SECTION
    ====================== */
 .testimonial-container {
-    position: relative;
-    overflow: hidden;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 60px 20px;
+    background: var(--secondary-color);
+    text-align: center;
 }
 
 .testimonial-slider {
     display: flex;
     overflow-x: auto;
-    /* Enable horizontal scroll */
     scroll-snap-type: x mandatory;
-    /* Enable snap behavior */
-    -webkit-overflow-scrolling: touch;
-    /* For smooth scrolling on iOS */
-    gap: 20px;
-    /* Space between items */
-    justify-content: center;
-    /* Center the items horizontally */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    margin-bottom: 30px;
 }
 
 .testimonial-box {
-    background: #fff;
+    flex: 0 0 100%; /* Each testimonial takes full width initially */
     padding: 30px;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
-    width: 100%;
-    /* Make the box take up 100% width of the container */
-    max-width: 350px;
-    /* Add a max-width to ensure it doesn't stretch too much */
-    flex-shrink: 0;
     scroll-snap-align: start;
-    /* Ensure each box aligns at the start */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    /* Ensures padding is accounted for in the width */
+    margin-right: 20px; /* Space between testimonials */
 }
 
-.testimonial-box .user-img {
+/* Remove margin from the last testimonial */
+.testimonial-slider > .testimonial-box:last-child {
+    margin-right: 0;
+}
+
+.user-img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
-    border: 4px solid #2a4d69;
 }
 
-.testimonial-box .testimonial-text {
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 15px;
-    color: #555;
+.testimonial-text {
+    color: var(--dark-color);
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-.testimonial-box .user-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
+.user-name {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
 }
 
-.testimonial-box .user-name span {
+.user-name span {
     display: block;
     font-size: 0.9rem;
-    color: #888;
+    color: #777;
 }
 
-/* Bullet Navigation */
 .testimonial-bullets {
-    text-align: center;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .testimonial-bullets button {
-    background: #ccc;
+    background: #ddd;
     border: none;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    margin: 0 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .testimonial-bullets button.active {
-    background: #2a4d69;
+    background: var(--primary-color);
 }
 
-/* Add some styling to center the bullets at the bottom */
-.testimonial-bullets {
-    position: absolute;
-    bottom: 20px;
-    /* Adjust position as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .testimonial-box {
+        padding: 20px;
+    }
 
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+
+    .user-name {
+        font-size: 1rem;
+    }
+
+    .user-name span {
+        font-size: 0.8rem;
+    }
+}
 
 /* ======================
    faq PAGE
