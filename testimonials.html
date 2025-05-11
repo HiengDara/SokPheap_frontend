@@ -46,112 +46,66 @@
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=12" alt="Avinash Kr" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “SokPheap has completely changed the way I manage my health. The AI suggestions are surprisingly
+                    accurate, and I feel more confident in my daily decisions.”
                 </p>
-                <h3 class="user-name">Avinash Kr <span>Co-Founder at xyz</span></h3>
+                <h3 class="user-name">Avinash Kr <span>Co-Founder at Meditech Solutions</span></h3>
             </div>
 
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “As someone managing a team in a high-pressure environment, SokPheap helps me stay on top of my
+                    physical and mental well-being. A game-changer for busy professionals.”
                 </p>
-                <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
+                <h3 class="user-name">Bharat Kunal <span>Operations Manager at CoreLogix</span></h3>
             </div>
 
             <div class="testimonial-box">
                 <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “What impressed me most was how easy it was to use. Within minutes, SokPheap provided health
+                    insights I never got from regular checkups.”
                 </p>
-                <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
+                <h3 class="user-name">Prabhakar D <span>Founder & CEO at VitalTrack</span></h3>
             </div>
 
             <div class="testimonial-box">
-                <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
+                <img src="https://i.pravatar.cc/100?img=23" alt="Sokuntha Lim" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “This app gives me peace of mind. I live in a rural area, and SokPheap has made healthcare advice
+                    more accessible than ever.”
                 </p>
-                <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
+                <h3 class="user-name">Sokuntha Lim <span>Primary School Teacher, Kampot</span></h3>
             </div>
 
             <div class="testimonial-box">
-                <img src="https://i.pravatar.cc/100?img=34" alt="Bharat Kunal" class="user-img">
+                <img src="https://i.pravatar.cc/100?img=45" alt="Nary Chea" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “I recommended SokPheap to my elderly parents, and they love how simple it is. It's like having a
+                    personal health assistant right in your pocket.”
                 </p>
-                <h3 class="user-name">Bharat Kunal <span>Manager at xyz</span></h3>
+                <h3 class="user-name">Nary Chea <span>Pharmacist, Phnom Penh</span></h3>
             </div>
 
             <div class="testimonial-box">
-                <img src="https://i.pravatar.cc/100?img=28" alt="Prabhakar D" class="user-img">
+                <img src="https://i.pravatar.cc/100?img=18" alt="Thomas Lee" class="user-img">
                 <p class="testimonial-text">
-                    “Like this video and ask your questions in the comment section. Don’t forget to subscribe Easy
-                    Tutorials YouTube channel to watch more videos of website designing, digital marketing, and
-                    Photoshop.”
+                    “Using SokPheap daily has helped me track patterns in my symptoms and prepare better for doctor
+                    visits. Highly recommend for anyone with chronic conditions.”
                 </p>
-                <h3 class="user-name">Prabhakar D <span>Founder / CEO at xyz</span></h3>
+                <h3 class="user-name">Thomas Lee <span>Software Developer at CodeCare</span></h3>
             </div>
-        </div>
-
-        <div class="testimonial-bullets">
-            <button class="active" onclick="showTestimonial(0)"></button>
-            <button onclick="showTestimonial(1)"></button>
-            <button onclick="showTestimonial(2)"></button>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.querySelector('.testimonial-slider');
-            const testimonials = document.querySelectorAll('.testimonial-box');
-            const bulletsContainer = document.querySelector('.testimonial-bullets');
 
-            const testimonialsPerPage = 3;
-            const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
-            let currentPage = 0;
-
-            function updateBullets() {
-                bulletsContainer.innerHTML = ''; // Clear existing bullets
-                for (let i = 0; i < totalPages; i++) {
-                    const button = document.createElement('button');
-                    if (i === currentPage) button.classList.add('active');
-                    button.addEventListener('click', () => showPage(i));
-                    bulletsContainer.appendChild(button);
-                }
-            }
-
-            function showPage(pageIndex) {
-                if (pageIndex >= 0 && pageIndex < totalPages) {
-                    currentPage = pageIndex;
-                    const scrollToIndex = pageIndex * testimonialsPerPage;
-                    if (testimonials[scrollToIndex]) {
-                        slider.scrollTo({
-                            left: testimonials[scrollToIndex].offsetLeft - slider.offsetLeft,
-                            behavior: 'smooth'
-                        });
-                        updateBullets();
-                    }
-                }
-            }
-
-            // Initialize bullets and show first page
-            updateBullets();
-        });
-    </script>
-
-
-
+    <div class="testimonial-bullets">
+        <button class="active" onclick="showTestimonial(0)"></button>
+        <button onclick="showTestimonial(1)"></button>
+        <button onclick="showTestimonial(2)"></button>
+    </div>
+    </div>
 
     <footer class="footer dark-background">
         <div class="container">
